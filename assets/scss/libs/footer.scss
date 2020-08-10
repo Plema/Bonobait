@@ -99,6 +99,9 @@ footer{
           color: #8ca1b1;
           font-size: 14px;
           font-weight: 400;
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -165,6 +168,17 @@ footer{
           display: flex;
         }
       }
+      ul{
+        h5{
+          font-size: 13px;
+        }
+        li{
+          margin-bottom: 20px;
+          a{
+            font-size: 13px;
+          }
+        }
+      }
     }
   }
 }
@@ -175,6 +189,7 @@ footer{
     padding-top: 40px;
     padding-bottom: 35px;
     .top-footer{
+      margin-bottom: 10px;
       .logo-link{
         .logo{
           margin: 0 0 20px;
@@ -200,6 +215,9 @@ footer{
         text-align: left;
         padding-left: 5px;
       }
+      .non-child{
+        width: auto;
+      }
     }
     .bottom-footer{
       justify-content: space-between;
@@ -209,3 +227,17 @@ footer{
     }
   }
 } 
+
+@media (min-width: 1400px) {
+  footer{
+    .top-footer{
+      justify-content: space-between;
+      .c14{
+        max-width: 145px;
+      }
+      ul{
+        padding-left: 0;
+      }
+    }
+  }
+}

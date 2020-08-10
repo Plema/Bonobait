@@ -4,23 +4,63 @@
   background-size: cover;
   min-height: 565px ;
   margin-bottom: 55px;
+  .num{
+    color: #8ca1b1;
+    font-size: 12px;
+    font-weight: 700;
+    span{
+      color: #8ca1b1;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+  .go-bot{
+    display: none;
+  }
   .all-slider-banner{
-    padding-top: 10px;
     position: relative;
     .slick-dots{
       position: absolute;
-      left: 0;
-      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      top: 55px;
+      bottom: 0;
+      margin: auto;
+      transition: 0.5s;
       li{
-        display: none;
-        a{
-          color: #8ca1b1;
-          font-size: 12px;
-          font-weight: 700;
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        border: 2px solid #8ca1b1;
+        margin: 8px 0;
+        border-radius: 50%;
+        transition: 0.5s;
+        position: relative;
+        button{
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          border: none;
+          background: transparent;
+          transition: 0.5s;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
         }
       }
       .slick-active{
-        display: flex;
+        width: 12px;
+        height: 12px;
+        border-color:  #66c3d1;
+        button{
+          background: #66c3d1;
+        }
       }
     }
     .slick-arrow{
@@ -69,11 +109,11 @@
       }
     }
     .slick-prev{
-      left: 25%;
+      left: 30%;
     }
     .slick-next{
       transform: rotate(180deg);
-      left: 55%;
+      left: 60%;
     }
     .content{
       padding-top: 15px;
@@ -190,11 +230,60 @@
       line-height: 24px;
     }
   }
+  .all-sel{
+    margin-bottom: 25px;
+    h4{
+      color: #231f20;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .select-mob{
+      width: 291px;
+      height: auto;
+      border-radius: 23px;
+      border: 1px solid #dfdfdf;
+      background-color: #ffffff;
+      position: relative;
+      position: absolute;
+      z-index: 10;
+      padding-right: 40px;
+      i{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 8px;
+        margin: auto;
+        color: #66c3d1;
+        display: block;
+        height: 8px;
+      }
+      p{
+        font-size: 14px;
+        font-weight: 500;
+        padding-left: 30px;
+        padding: 14px 0;
+      }
+      .showText{
+        color: #66c3d1;
+      }
+      .hiddenText{
+        display: none;
+        text-decoration: underline;
+        color: #231f20;
+      }
+    }
+  }
   .all-direction{
+    padding-top: 70px;
+    .select-desc{
+      display: none;
+    }
     .all-blocks{
       .one-block{
         position: relative;
         padding: 0 15px 40px;
+        display: none;
         &:before{
           width: 100%;
           content: '';
@@ -205,6 +294,9 @@
           height: 76.5%;
           background-color: #e6f8fb;
           z-index: 0;
+        }
+        .numb{
+          display: none;
         }
         img{
           display: block;
@@ -234,6 +326,9 @@
           z-index: 2;
         }
       }
+      .active{
+        display: block;
+      }
     }
   }
 }
@@ -247,6 +342,11 @@
 
 @media (min-width: 425px) {
   .top-banner{
+    .num{
+      max-width: 350px;
+      margin: 0 auto;
+      width: 100%;
+    }
     .all-slider-banner{
       .content{
         max-width: 350px;
@@ -267,6 +367,9 @@
 
 @media (min-width: 500px) {
   .top-banner{
+    .num{
+      max-width: 400px;
+    }
     .all-slider-banner{
       .content{
         max-width: 400px;
@@ -308,6 +411,16 @@
 @media (min-width: 768px) {
   .top-banner{
     background: url('../img/desk-banner.jpg') no-repeat 50% 60%;
+    .container{
+      position: relative;
+      .num{
+        max-width: 20px;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+    }
     .all-slider-banner{
       .slick-dots{
         top: 55px;
@@ -349,15 +462,60 @@
       background: url('../img/plan-desc.png') no-repeat;
     }
   }
+  .med-vet{
+    .medicine{
+      .all-direction{
+        width: 648px;
+        margin: 0 auto;
+        .all-blocks{
+          .one-block{
+            display: none;
+            align-items: flex-start;
+            &:before{
+              left: auto;
+              width: 70%;
+              height: 90%;
+            }
+            img{
+              max-width: 270px;
+              margin-bottom: 0;
+              margin-right: 30px;
+            }
+            .text{
+              padding-top: 60px;
+            }
+          }
+          .active{
+            display: flex;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
   .top-banner{
     padding: 120px 0 180px;
     background-position: 62% 40%;
+    .container{
+      .num{
+        top: 75px;
+      }
+    }
     .all-slider-banner{
       .slick-dots{
-        top: 85px;
+        top: 50px;
+        li{
+          width: 10px;
+          height: 10px;
+          border-width: 3px;
+          margin: 11px 0;
+        }
+        .slick-active{
+          width: 15px;
+          height: 15px;
+        }
       }
       .slick-arrow{
         bottom: 0;
@@ -389,14 +547,146 @@
       }
     }
   }
+  .med-vet{
+    .medicine{
+      .all-sel{
+        display: none;
+      }
+      .title{
+        max-width: 335px;
+        width: 100%;
+      }
+      .all-direction{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 864px;
+        padding-top: 0;
+        margin-top: -45px;
+        .select-desc{
+          display: block;
+          padding-bottom: 50px;
+          h4{
+            color: #231f20;
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 30px;
+          }
+          p{
+            color: #231f20;
+            font-size: 15px;
+            font-weight: 400;
+            text-decoration: underline;
+            transition: 0.5s;
+            padding-left: 20px;
+            position: relative;
+            &:before, &:after{
+              content: '';
+              border-radius: 50%;
+              display: block;
+              position: absolute;
+              transition: 0.5s;
+            }
+            &:before{
+              width: 10px;
+              height: 10px;
+              left: 0;
+              border: 2px solid  #66c3d1;
+              top: 5px;
+            }
+            &:after{
+              top: 7px;
+              width: 4px;
+              height: 4px;
+              left: 5px;
+              opacity: 0;
+              background: #66c3d1;
+            }
+            &:not(:last-of-type){
+              margin-bottom: 30px;
+            }
+          }
+          .active{
+            color: #66c3d1;
+            &:before{
+              width: 14px;
+              height: 14px;
+              border-width: 3px;
+              top: 2px;
+            }
+            &:after{
+              opacity: 1;
+            }
+          }
+        }
+        .all-blocks{
+          .one-block{
+            .text{
+              max-width: 340px;
+              width: 100%;
+              .numb{
+                display: flex;
+                align-items: center;
+                z-index: 2;
+                margin-bottom: 20px;
+                position: relative;
+                span{
+                  width: 9px;
+                  height: 9px;
+                  border-radius: 50%;
+                  display: block;
+                  margin-right: 12px;
+                  border: 2px solid #66c3d1;
+                }
+                strong{
+                  color: #66c3d1;
+                  font-size: 12px;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1280px) {
   .top-banner{
     padding-top: 150px;
+    .container{
+      .num{
+        top: 50px;
+        font-size: 18px;
+        span{
+          font-size: 18px;
+        }
+      }
+      .go-bot{
+        position: absolute;
+        left: -35px;
+        bottom: -160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+          color: #8ca1b1;
+          font-size: 9px;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.68px;
+          transform: rotate(-90deg);
+        }
+        img{
+          margin-top: 50px;
+        }
+      }
+    }
     .all-slider-banner{
       .slick-dots{
-        top: 60px;
+        top: 30px;
+        bottom: auto;
         li{
           a{
             font-size: 16px;
@@ -434,12 +724,56 @@
       }
     }
   }
+  .med-vet{
+    .medicine{
+      .title{
+        h3, h5{
+          max-width: 290px;
+        }
+      }
+      .all-direction{
+        width: 1080px;
+        margin-top: -150px;
+        .select-desc{
+          margin-right: 65px;
+          padding-bottom: 80px;
+        }
+        .all-blocks{
+          .one-block{
+            padding: 0 0 80px;
+            &:before{
+              width: 60%;
+            }
+            img{
+              max-width: 370px;
+              margin-right: 45px;
+            }
+            .text{
+              padding-right: 55px;
+              padding-top: 90px;
+              .blue-button{
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 } 
 
 @media (min-width: 1400px) {
   .top-banner{
     padding-top: 170px;
     padding-bottom: 250px;
+    .container{
+      .num{
+        top: 40px;
+      }
+      .go-bot{
+        bottom: -200px;
+      }
+    }
     .all-slider-banner{
       .content{
         .img{
@@ -460,11 +794,43 @@
       }
     }
   }
+  .med-vet{
+    .medicine{
+      .all-direction{
+        width: 1160px;
+        margin-top: -200px;
+        .all-blocks{
+          .one-block{
+            &:before{
+              top: 95px;
+              height: 82%;
+            }
+            img{
+              margin-right: 55px;
+              max-width: 420px;
+            }
+            .text{
+              padding-top: 155px;
+              h4{
+                font-size: 24px;
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 } 
 
 @media (min-width: 1600px) {
   .top-banner{
     padding-bottom: 310px;
+    .container{
+      .go-bot{
+        bottom: -250px;
+      }
+    }
     .all-slider-banner{
       .content{
         h2{
@@ -479,6 +845,20 @@
       img{
         max-width: 754px;
         margin-left: -150px;
+      }
+    }
+  }
+  .med-vet{
+    .medicine{
+      .all-direction{
+        width: 1285px;
+        .all-blocks{
+          .one-block{
+            img{
+              margin-right: 85px;
+            }
+          }
+        }
       }
     }
   }
