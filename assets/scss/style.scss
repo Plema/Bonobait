@@ -1,0 +1,167 @@
+@import "libs/button";
+@import "libs/header";
+@import "libs/footer";
+@import "libs/fonts";
+@import "libs/fontello";
+@import "libs/normalize";
+
+body {
+    position: relative;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul li,
+ol li {
+    margin: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.clearfix {
+    &:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        clear: both;
+        height: 0;
+    }
+}
+
+a {
+    cursor: pointer;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+h1 {}
+
+h2 {}
+
+h3 {
+    color: #231f20;
+    font-size: 21px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 25px;
+    &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 216px;
+        height: 2px;
+        background-color: #088dd2;
+    }
+}
+
+h4 {}
+
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 648px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 864px;
+    }
+    h3{
+        font-size: 32px;
+        &:before{
+            width: 335px;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 1080px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1160px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1285px;
+    }
+}
+
+::-webkit-scrollbar {height: 50px; width: 3px;}
+::-webkit-scrollbar-track {  background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: auto; background-color: #088DD2; width: 3px;}
