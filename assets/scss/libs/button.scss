@@ -33,6 +33,12 @@
   font-size: 12px;
   font-weight: 500;
   display: block;
+  transition: 0.5s;
+  border: none;
+  font-family: 'Montserrat';
+  &:hover{
+    background-color: #1174a8;
+  }
 }
 
 .more{

@@ -103,7 +103,95 @@ $(document).ready(function(){
     $('.main-img').attr('src' , imgSrc);
   });
 
+ 
+  $('.all-slider-partners').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+        }
+      },
+    ]
+  });
+ 
+  $('.all-slider-news').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    variableWidth: false,
+    fade: false,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          variableWidth: false,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: false,
+          dots: false,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+          fade: true,
+          dots: true,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+        }
+      },
+    ]
+  });
 
+  $( ".showTextForm" ).click(function(event) {
+    event.preventDefault();
+    $('.hiddenTextForm').stop().slideToggle();
+  });
+
+  $( ".hiddenTextForm" ).click(function(event) {
+    var x = $(this).text();
+    var y = $(".showText").text();
+    $(this).text(y);
+    $(".showTextForm").text(x);
+    $('.hiddenTextForm').stop().slideToggle();
+  });
     
   //Slick-empty
   $('.slick-arrow').empty();
