@@ -13,10 +13,6 @@ $(document).ready(function(){
   $(".all-slider-banner").on('afterChange', function(event, slick, currentSlide, slidesCount){
     $("#cp").text(currentSlide + 1);
   });
-  
-  //Slick-empty
-  $('.slick-arrow').empty();
-  $('.slick-dots > li > button').empty();
 
   $(".more").bind("click", function(event){
     $('.hidd').css('display','block');
@@ -82,5 +78,34 @@ $(document).ready(function(){
   }
   $(window).on('load resize',windowSize);
 
+ 
+  $('.all-vet-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 700,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          arrows: false,
+        }
+      },
+    ]
+  });
 
+  $('.dop > img').on('click', function(){
+    var imgSrc = $(this).attr('src');
+    $('.main-img').attr('src' , imgSrc);
+  });
+
+
+    
+  //Slick-empty
+  $('.slick-arrow').empty();
+  $('.slick-dots > li > button').empty();
 });
