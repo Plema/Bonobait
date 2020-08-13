@@ -5,6 +5,36 @@ $(document).ready(function(){
   $(".burg").bind("click", function(event){
     $('.nav-mob').toggleClass('open-nav-mob');
   });
+
+  
+  $(".first-med").bind("click", function(event){
+    $('.all-sel-desc > p').removeClass('active');
+    $(this).addClass('active');
+    $('.all-blocks > .one-block').removeClass('active');
+    $('.all-blocks > .first').addClass('active');
+    console.log('yes')
+  });
+
+  $(".second-med").bind("click", function(event){
+    $('.all-sel-desc > p').removeClass('active');
+    $(this).addClass('active');
+    $('.all-blocks > .one-block').removeClass('active');
+    $('.all-blocks > .second').addClass('active');
+  });
+
+  $(".third-med").bind("click", function(event){
+    $('.all-sel-desc > p').removeClass('active');
+    $(this).addClass('active');
+    $('.all-blocks > .one-block').removeClass('active');
+    $('.all-blocks > .third').addClass('active');
+  });
+
+  $(".fourth-med").bind("click", function(event){
+    $('.all-sel-desc > p').removeClass('active');
+    $(this).addClass('active');
+    $('.all-blocks > .one-block').removeClass('active');
+    $('.all-blocks > .fourth').addClass('active');
+  });
  
   // $(".menu-burg").bind("click", function(event){
   //   $('.burger-menu').addClass('open-burger-menu');

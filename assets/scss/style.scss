@@ -121,7 +121,42 @@ h3 {
 
 h4 {}
 
-
+.crumbs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    li{
+        position: relative;
+        &:not(:last-of-type){
+            padding-right: 30px;
+            &:before{
+                content: '';
+                width: 2px ;
+                height: 2px;
+                border-radius: 50%;
+                background: #8ca1b1;
+                position: absolute;
+                top: 2px;
+                bottom: 0;
+                right: 14px;
+                margin: auto;
+            }
+        }
+        &:last-of-type{
+            a{
+                color: #088dd2;
+            }
+        }
+        a{
+            color: #8ca1b1;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+}
 
 @media (min-width: 768px) {
     .container {

@@ -19,34 +19,6 @@ $(document).ready(function(){
     $('.more').css('display','none');
   });
 
-  $(".first-med").bind("click", function(event){
-    $('.all-sel-desc > p').removeClass('active');
-    $(this).addClass('active');
-    $('.all-blocks > .one-block').removeClass('active');
-    $('.all-blocks > .first').addClass('active');
-    console.log('yes')
-  });
-
-  $(".second-med").bind("click", function(event){
-    $('.all-sel-desc > p').removeClass('active');
-    $(this).addClass('active');
-    $('.all-blocks > .one-block').removeClass('active');
-    $('.all-blocks > .second').addClass('active');
-  });
-
-  $(".third-med").bind("click", function(event){
-    $('.all-sel-desc > p').removeClass('active');
-    $(this).addClass('active');
-    $('.all-blocks > .one-block').removeClass('active');
-    $('.all-blocks > .third').addClass('active');
-  });
-
-  $(".fourth-med").bind("click", function(event){
-    $('.all-sel-desc > p').removeClass('active');
-    $(this).addClass('active');
-    $('.all-blocks > .one-block').removeClass('active');
-    $('.all-blocks > .fourth').addClass('active');
-  });
 
   function windowSize(){
     if ($(window).width() < '1280'){
@@ -192,6 +164,8 @@ $(document).ready(function(){
     $(".showTextForm").text(x);
     $('.hiddenTextForm').stop().slideToggle();
   });
+
+  // $("#phone1").mask("8(999) 999-9999");
     
   //Slick-empty
   $('.slick-arrow').empty();

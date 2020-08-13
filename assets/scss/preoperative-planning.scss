@@ -1,0 +1,429 @@
+main{
+  padding-top: 75px;
+  padding-bottom: 55px;
+  .preor{
+    .all-contant{
+      h3{
+        margin-bottom: 20px;
+      }
+      p{
+        color: #231f20;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        padding: 0 15px;
+      }
+      .left-part{
+        p{
+          margin-bottom: 50px;
+        }
+      }
+      .all{
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .schema-work{
+    padding-top: 35px;
+    position: relative;
+    &:before{
+      left: 0;
+      top: 0;
+      content: '';
+      position: absolute;
+      width: 68px;
+      height: 104px;
+      background: url('../img/schema-mob.png') no-repeat;
+      z-index: 0;
+    }
+    h3{
+      margin-bottom: 70px;
+    }
+    .all-slider-schema{
+      .slick-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        li{
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 2px solid  #8ca1b1;
+          margin: 0 9px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button{
+            width: 2px;
+            height: 2px;
+            opacity: 0;
+            transition: 0.5s;
+            background: #66c3d1;
+            border: none;
+          }
+        }
+        .slick-active{
+          width: 10px;
+          height: 10px;
+          border-color: #66c3d1;
+          button{
+            opacity: 1;
+          }
+        }
+      }
+      .content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        .one-step{
+          position: relative;
+          max-width: 140px;
+          width: 100%;
+          margin-bottom: 35px;
+          .numb{
+            color: #66c3d1;
+            font-size: 12px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: block;
+          }
+          .img{
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 20px;
+            &:before{
+              width: 46px;
+              height: 46px;
+              background-color: #ebf7f9;
+              border-radius: 50%;
+              content: '';
+              position: absolute;
+              left: 45px;
+            }
+            img{
+              z-index: 2;
+              position: relative;
+            }
+          }
+          .circle{
+            position: absolute;
+            top: 85px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 9px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #66c3d1;
+          }
+          h6{
+            padding-left: 20px;
+            color: #231f20;
+            font-size: 15px;
+            font-weight: 400;
+          }
+        }
+        .to-right{
+          &:after{
+            width: 110px;
+            content: '';
+            position: absolute;
+            top: 89px;
+            left: 85px;
+            height: 2px;
+            border-top: 2px dashed  #dddddd;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  main{
+    .schema-work{
+      .all-slider-schema{
+        .content{
+          .one-step{
+            max-width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  main{
+    .schema-work{
+      .all-slider-schema{
+        .content{
+          .one-step{
+            max-width: 180px;
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 550px) {
+  main{
+    .schema-work{
+      .all-slider-schema{
+        .content{
+          .one-step{
+            max-width: 190px;
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 600px) {
+  main{
+    .schema-work{
+      .all-slider-schema{
+        .content{
+          .one-step{
+            max-width: 140px;
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 768px) {
+  main{
+    .preor{
+      .all-contant{
+        width: 648px;
+        padding: 0;
+        margin: 0 auto;
+        p{
+          padding: 0;
+        }
+      }
+    }
+    .schema-work{
+      .all-slider-schema{
+        max-width: 945px;
+        width: 100%;
+        margin: 0 auto;
+        .content{
+          .one-step{
+            margin: 0 10px 35px;
+            &:after{
+              left: 95px;
+            }
+          }
+          .right-next{
+            &:after{
+              width: 110px;
+              content: '';
+              position: absolute;
+              top: 89px;
+              left: 95px;
+              height: 2px;
+              border-top: 2px dashed  #dddddd;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main{
+    .preor{
+      .all-contant{
+        width: 864px;
+      }
+    }
+    .schema-work{
+      &:before{
+        background: url('../img/shema-desc.png') no-repeat;
+        width: 427px;
+        height: 557px;
+        top: -250px;
+      }
+      .all-slider-schema{
+        .one-slide{
+          &:first-of-type{
+            .content{
+              &:before{
+                width: 85%;
+                content: '';
+                height: 70px;
+                position: absolute;
+                right: 30px;
+                top: 0;
+                background: url('../img/line.png') no-repeat 100% 100%;
+                background-size: contain;
+              }
+            }
+          }
+          &:last-of-type{
+            .content{
+              &:before{
+                width: 87%;
+                content: '';
+                height: 70px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: url('../img/line2.png') no-repeat 100% 100%;
+                background-size: contain;
+              }
+            }
+          }
+          .content{
+            justify-content: space-between;
+            position: relative;
+            .one-step{
+              max-width: 155px;
+              width: auto;
+              h6{
+                font-size: 15px;
+              }
+              &:after{
+                display: none;
+              }
+            }
+            .first{
+              .circle{
+                top: 5px;
+                left: 9px;
+              }
+            }
+            .second{
+              .circle{
+                top: 63px;
+                left: 42px;
+              }
+            }
+            .third{
+              .circle{
+                top: 4px;
+              }
+            }
+            .fourth{
+              .circle{
+                left: auto;
+                right: 4px;
+                top: 59px;
+              }
+            }
+            .fifth{
+              .circle{
+                top: 65px;
+                left: 32px;
+              }
+            }
+            .sixth{
+              .circle{
+                top: 2px;
+              }
+            }
+            .sevens{
+              .circle{
+                top: 61px;
+                left: 64px;
+              }
+            }
+            .eight{
+              .circle{
+                top: 5px;
+                left: auto;
+                right: -13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  main{
+    .preor{
+      .all-contant{
+        width: 1080px;
+      }
+    }
+    .schema-work{
+      .all-slider-schema{
+        .one-slide{
+          &:first-of-type{
+            .content{
+              &:before{
+                right: 45px;
+              }
+            }
+          }
+          .content{
+            &:before{
+              width: 810px;
+              right: 0;
+            }
+            .first{
+              .circle{
+                top: 0;
+                left: 4px;
+              }
+            }
+            .third{
+              .circle{
+                left: 75px;
+                top: 1px;
+              }
+            }
+            .fourth{
+              .circle{
+                right: 22px;
+              }
+            }
+            .fifth{
+              .circle{
+                top: 64px;
+                left: 54px;
+              }
+            }
+            .sixth{
+              .circle{
+                top: -2px;
+                left: 36px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  main{
+    .preor{
+      .all-contant{
+        width: 1160px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  main{
+    .preor{
+      .all-contant{
+        width: 1285px;
+      }
+    }
+  }
+}
