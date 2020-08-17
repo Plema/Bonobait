@@ -119,6 +119,11 @@ main{
 
 @media (min-width: 768px){
   .medicine{
+    .title{
+      h5{
+        max-width: 740px;
+      }
+    }
     .all-direction{
       width: 648px;
       margin: 0 auto;
@@ -156,24 +161,27 @@ main{
       display: none;
     }
     .title{
-      max-width: 335px;
-      width: 100%;
+      margin-bottom: 80px;
     }
     .all-direction{
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
       width: 864px;
       padding-top: 0;
-      margin-top: -45px;
+      padding-bottom: 110px;
       .select-desc{
         display: block;
         padding-bottom: 50px;
         h4{
           color: #231f20;
-          font-size: 22px;
+          font-size: 24px;
           font-weight: 300;
           margin-bottom: 30px;
+          text-align: center;
+        }
+        .all-sel-desc{
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          flex-wrap: wrap;
         }
         p{
           color: #231f20;
@@ -225,9 +233,32 @@ main{
       }
       .all-blocks{
         .one-block{
+          &:before{
+            display: none;
+          }
+          padding: 0;
+          justify-content: center;
+          img{
+            max-width: 40%;
+            margin: 0;
+          }
           .text{
-            max-width: 340px;
+            max-width: 60%;
             width: 100%;
+            padding: 40px;
+            margin-top: 40px;
+            position: relative;
+            min-height: 365px;
+            &:before{
+              top: 0;
+              left: 0;
+              width: 100%;
+              content: '';
+              position: absolute;
+              z-index: 0;
+              background-color: #e6f8fb;
+              height: 100%;
+            }
             .numb{
               display: flex;
               align-items: center;
@@ -248,6 +279,9 @@ main{
                 font-weight: 700;
               }
             }
+            a{
+              margin: 0;
+            }
           }
         }
       }
@@ -257,32 +291,32 @@ main{
 
 @media (min-width: 1280px) {
   .medicine{
-    margin-bottom: 115px;
-    .title{
-      h3, h5{
-        max-width: 290px;
-      }
-    }
+    margin-bottom: 140px;
     .all-direction{
       width: 1080px;
-      margin-top: -150px;
+      padding: 0;
       .select-desc{
-        margin-right: 65px;
-        padding-bottom: 80px;
+        padding-bottom: 40px;
       }
       .all-blocks{
         .one-block{
-          padding: 0 0 80px;
-          &:before{
-            width: 60%;
-          }
+          padding: 0;
+          align-items: flex-end;
           img{
-            max-width: 370px;
-            margin-right: 45px;
+            max-width: 425px;
           }
           .text{
-            padding-right: 55px;
-            padding-top: 90px;
+            padding: 75px 100px  55px 80px;
+            max-width: 824px;
+            width: 100%;
+            min-height: 450px;
+            h4{
+              margin-bottom: 35px;
+              font-size: 24px;
+            }
+            p{
+              margin-bottom: 60px;
+            }
             .blue-button{
               margin: 0;
             }
@@ -302,26 +336,6 @@ main{
     }
     .all-direction{
       width: 1160px;
-      margin-top: -220px;
-      .all-blocks{
-        .one-block{
-          &:before{
-            top: 95px;
-            height: 82%;
-          }
-          img{
-            margin-right: 55px;
-            max-width: 420px;
-          }
-          .text{
-            padding-top: 155px;
-            h4{
-              font-size: 24px;
-              margin-bottom: 30px;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -330,13 +344,6 @@ main{
   .medicine{
     .all-direction{
       width: 1285px;
-      .all-blocks{
-        .one-block{
-          img{
-            margin-right: 85px;
-          }
-        }
-      }
     }
   }
 } 
