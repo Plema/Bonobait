@@ -5,6 +5,11 @@ $(document).ready(function(){
   $(".burg").bind("click", function(event){
     $('.nav-mob').toggleClass('open-nav-mob');
   });
+ 
+  $(".open-list").bind("click", function(event){
+    // $('.hiddenNav').removeClass('openHiddenNav');
+    $(this).find('.hiddenNav').toggleClass('openHiddenNav');
+  });
 
   
   $(".first-med").bind("click", function(event){
@@ -35,35 +40,15 @@ $(document).ready(function(){
     $('.all-blocks > .one-block').removeClass('active');
     $('.all-blocks > .fourth').addClass('active');
   });
- 
-  // $(".menu-burg").bind("click", function(event){
-  //   $('.burger-menu').addClass('open-burger-menu');
-  //   $('body').css('overflow','hidden');
-  // });
- 
-  // $(".close-burg").bind("click", function(event){
-  //   $('.burger-menu').removeClass('open-burger-menu');
-  //   $('body').css('overflow','auto');
-  // });
 
-  // $(".close-pop").bind("click", function(event){
-  //   $('.pop-up').removeClass('open-pop');
-  //   $('.back-dark').removeClass('open-back-dark');
-  //   $('body').css('overflow','auto')
-  // });
+  
+  $('.dop > img').on('click', function(){
+    var imgSrc = $(this).attr('src');
+    $('.main-img').attr('src' , imgSrc);
+  });
 
-  // $(".back-dark").bind("click", function(event){
-  //   $('.pop-up').removeClass('open-pop');
-  //   $('.back-dark').removeClass('open-back-dark');
-  //   $('body').css('overflow','auto')
-  // });
+  $("#phone1").mask("8(999) 999-9999");
 
-  // $("#check1-contactMenedg").mask("8(999) 999-9999");
-  // $("#check1-contactMenedgBig").mask("8(999) 999-9999");
-  // $("#numb3").mask("8(999) 999-9999");
-  // $("#inp-footer").mask("8(999) 999-9999");
-  // $("#inp-popup1").mask("8(999) 999-9999");
-  // $("#phone-p").mask("8(999) 999-9999");
 });
 
 

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   function windowSize(){
-    if ($(window).width() < '1280'){
+    if ($(window).width() < '768'){
 
         $( ".showTextGeneral" ).click(function(event) {
           event.preventDefault();
@@ -15,15 +15,43 @@ $(document).ready(function(){
           $('.hiddenTextGeneral').stop().slideToggle();
         });
 
-    } else {
-      $(".select-desc > p").bind("click", function(event){
-
-        $(this).parent().parent().find(".all-block-info").removeClass().addClass("all-block-info");
-        var $thisClass = $(this).attr("class");
-        var $some = $(this).parent().parent().find(".all-block-info").addClass($thisClass + "-show");
-
-        $('.select-desc > p').removeClass('active');
-        $(this).addClass('active');
+    } 
+    else {
+      $(".first-v").bind("click", function(event){
+        $('.select > p').removeClass('showTextGeneral');
+        $(this).addClass('showTextGeneral');
+        $('.one-slide').removeClass('activ-vet')
+        $('.first-vet').addClass('activ-vet')
+      });
+      $(".sec-v").bind("click", function(event){
+        $('.select > p').removeClass('showTextGeneral');
+        $(this).addClass('showTextGeneral');
+        $('.one-slide').removeClass('activ-vet')
+        $('.sec-vet').addClass('activ-vet')
+      });
+      $(".third-v").bind("click", function(event){
+        $('.select > p').removeClass('showTextGeneral');
+        $(this).addClass('showTextGeneral');
+        $('.one-slide').removeClass('activ-vet')
+        $('.third-vet').addClass('activ-vet')
+      });
+      $(".four-v").bind("click", function(event){
+        $('.select > p').removeClass('showTextGeneral');
+        $(this).addClass('showTextGeneral');
+        $('.one-slide').removeClass('activ-vet')
+        $('.four-vet').addClass('activ-vet')
+      });
+      $(".fif-v").bind("click", function(event){
+        $('.select > p').removeClass('showTextGeneral');
+        $(this).addClass('showTextGeneral');
+        $('.one-slide').removeClass('activ-vet')
+        $('.fif-vet').addClass('activ-vet')
+      });
+      $(".six-v").bind("click", function(event){
+        $('.select > p').removeClass('showTextGeneral');
+        $(this).addClass('showTextGeneral');
+        $('.one-slide').removeClass('activ-vet')
+        $('.six-vet').addClass('activ-vet')
       });
     }
   }

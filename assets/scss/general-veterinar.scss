@@ -1,13 +1,9 @@
 main{
-  padding-top: 75px;
+  padding-top: 90px;
 }
 .veterenar{
   padding-top: 0;
   position: relative;
-  margin-bottom: 35px;
-  .container{
-    position: relative;
-  }
   h3{
     margin-bottom: 15px;
   }
@@ -16,20 +12,20 @@ main{
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 25px;
+    line-height: 24px;
   }
   .npr{
-    position: absolute;
-    bottom: -29px;
-    left: 15px;
     color: #231f20;
     font-size: 18px;
     font-weight: 300;
+    padding: 0 15px;
   }
 .all-sel{
   position: relative;
   width: 290px;
   height: 50px;
   margin-bottom: 25px;
+  padding: 0 15px;
   .icon-triangle-1{
     position: absolute;
     z-index: 11;
@@ -53,6 +49,7 @@ main{
       font-size: 14px;
       font-weight: 500;
       padding: 15px 30px;
+      cursor: pointer;
     }
     .showTextGeneral{
       color: #66c3d1;
@@ -65,52 +62,27 @@ main{
 }
   .all-vet-slider{
     position: relative;
-    .slick-dots{
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-left: 140px;
-      li{
-        width: 8px;
-        height: 8px;
-        transition: 0.5s;
-        background: transparent;
-        border: 2px solid  #8ca1b1;
-        position: relative;
-        border-radius: 50%;
-        margin: 0 8px;
-        button{
-          border: none;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          left: 0;
-          right: 0;
-          background: transparent;
-          display: block;
-          transition: 0.5s;
-          width: 2px;
-          height: 2px;
-          border-radius: 50%;
-        }
-      }
-      .slick-active{
-        border-color:  #66c3d1;
-        width: 10px;
-        height: 10px;
-        button{
-          background:  #66c3d1;
-        }
-      }
-    }
     .one-slide{
-      padding-bottom: 40px;
+      display: none;
+      position: relative;
+      justify-content: center;
+      padding: 0 15px 40px;
+      &:before{
+        content: '';
+        position: absolute;
+        background-color: #e6f8fb;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+        height: 73%;
+      }
       .content{
         display: flex;
         flex-direction: column-reverse;
+        position: relative;
+        z-index: 1;
         .text-block{
-          margin-bottom: 40px;
           .numb{
             display: flex;
             align-items: center;
@@ -146,6 +118,9 @@ main{
           }
         }
         .image-block{
+          max-width: 420px;
+          width: 100%;
+          margin: 0 auto 30px;
           .main-img{
             margin-bottom: 15px;
             display: block;
@@ -167,5 +142,291 @@ main{
         }
       }
     }
+    .activ-vet{
+      display: flex;
+    }
   }
 }
+
+@media (min-width: 768px) {
+  main{
+    .veterenar{
+      .npr{
+        text-align: center;
+        padding: 0;
+      }
+      .all-sel{
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        i{
+          display: none;
+        }
+        .select{
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          position: relative;
+          width: auto;
+          border: none;
+          p{
+            padding: 0 40px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+            color: #231f20;
+            font-size: 15px;
+            font-weight: 400;
+            text-decoration: underline;
+            transition: 0.5s;
+            padding-left: 30px;
+            position: relative;
+            &:before{
+              top: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+              width: 10px;
+              height: 10px;
+              border: 2px solid  #66c3d1;
+              border-radius: 50%;
+              content: '';
+              position: absolute;
+              transition: 0.5s;
+            }
+            &:after{
+              content: '';
+              position: absolute;
+              top: 7px;
+              left: 5px;
+              bottom: 0;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: #66c3d1;
+              transition: 0.5s;
+              opacity: 0;
+            }
+          }
+          .hiddenTextGeneral{
+            display: block;
+            color: #231f20;
+            font-size: 15px;
+            font-weight: 400;
+          }
+          .showTextGeneral{
+            color: #66c3d1;
+            &:before{
+              width: 14px;
+              height: 14px;
+            }
+            &:after{
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .all-vet-slider{
+        width: 648px;
+        padding: 0;
+        margin: 0 auto;
+        .one-slide{
+          &:before{
+            height: 70%;
+          }
+          .content{
+            .image-block{
+              max-width: 545px;
+              display: flex;
+              align-items: flex-end;
+              flex-direction: row-reverse;
+              justify-content: center;
+              .main-img{
+                margin-bottom: 0;
+              }
+              .dop{
+                display: flex;
+                flex-direction: column;
+                img{
+                  &:not(:last-of-type){
+                    margin-bottom: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 1024px) {
+  main{
+    .veterenar{
+      .title{
+        margin-bottom: 80px;
+        h3{
+          margin-bottom: 35px;
+        }
+        h5{
+          max-width: 740px;
+          margin-bottom: 0;
+        }
+      }
+      .all-sel{
+        margin-bottom: 35px;
+      }
+      .all-vet-info{
+        padding-bottom: 110px;
+        .npr{
+          text-align: center;
+          font-size: 24px;
+          margin-bottom: 40px;
+        }
+        .all-vet-slider{
+          width: 864px;
+          padding: 0;
+          .one-slide{
+            padding: 0;
+            &:before{
+              display: none;
+            }
+            .content{
+              display: flex;
+              align-items: flex-start;
+              flex-direction: row-reverse;
+              justify-content: center;
+              .image-block{
+                flex-direction: column;
+                justify-content: flex-start;
+                .main-img{
+                  margin-bottom: 10px;
+                }
+                .dop{
+                  flex-direction: row;
+                }
+              }
+              .text-block{
+                margin-top: 70px;
+                max-width: 50%;
+                width: 100%;
+                padding: 60px 20px 60px 30px;
+                position: relative;
+                h5{
+                  z-index: 1;
+                  position: relative;
+                }
+                p{
+                  z-index: 1;
+                  position: relative;
+                }
+                a{
+                  z-index: 1;
+                  position: relative;
+                  margin: 0;
+                }
+                &:before{
+                  content: '';
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  z-index: 0;
+                  background-color: #e6f8fb;
+                  top: 0;
+                  left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1280px) {
+  main{
+    .veterenar{
+      .all-vet-info{
+        .all-vet-slider{
+          width: 1080px;
+          .one-slide{
+            .content{
+              .image-block{
+                flex-direction: row-reverse;
+                margin: 0;
+                .main-img{
+                  margin-bottom: 0;
+                }
+                .dop{
+                  flex-direction: column;
+                }
+              }
+              .text-block{
+                h5{
+                  font-size: 24px;
+                  margin-bottom: 40px;
+                }
+                p{
+                  font-size: 14px;
+                  margin-bottom: 40px;
+                }
+                padding-left: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 1400px) {
+  main{
+    .veterenar{
+      .all-vet-info{
+        .all-vet-slider{
+          width: 1160px;;
+          .one-slide{
+            .content{
+              .text-block{
+                max-width: 720px;
+                width: 100%;
+                padding: 65px 50px 60px 80px;
+                p{
+                  margin-bottom: 60px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 1600px) {
+  main{
+    .veterenar{
+      .all-vet-info{
+        .all-vet-slider{
+          width: 1285px;;
+          .one-slide{
+            .content{
+              .image-block{
+                .dop{
+                  img{
+                    margin-right: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 

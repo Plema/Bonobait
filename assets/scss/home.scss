@@ -167,6 +167,10 @@ main{
   }
 }
 
+.schema-work{
+  margin-bottom: 70px;
+}
+
 .plan{
   padding-top: 0;
   margin-bottom: 30px;
@@ -939,6 +943,9 @@ main{
       }
     }
   }
+  .schema-work{
+    margin-bottom: 120px;
+  }
   .plan{
     padding-top: 50px;
     .right-part{
@@ -1375,6 +1382,9 @@ main{
 } 
 
 @media (min-width: 1920px) {
+  .top-banner{
+    background-size: cover;
+  }
   .med-vet{
     .veterenar{
       &:before{

@@ -1,5 +1,5 @@
 main{
-  padding-top: 75px;
+  padding-top: 90px;
   padding-bottom: 50px;
   h3{
     margin-bottom: 35px;
@@ -89,13 +89,14 @@ main{
 
 @media (min-width: 1280px) {
   main{
+    padding-bottom: 60px;
     .all-news{
       justify-content: flex-start;
       .one-news{
-        margin-right: 18px;
-        max-width: 340px;
+        margin-right: 65px;
+        max-width: 292px;
         img{
-          max-width: 340px;
+          max-width: 292px;
         }
       }
     }
@@ -106,10 +107,10 @@ main{
   main{
     .all-news{
       .one-news{
-        margin-right: 15px;
-        max-width: 370px;
+        margin-right: 10px;
+        max-width: 280px;
         img{
-          max-width: 370px;
+          max-width: 280px;
         }
       }
     }
@@ -120,7 +121,11 @@ main{
   main{
     .all-news{
       .one-news{
-        margin-right: 55px;
+        margin-right: 28px;
+        max-width: 292px;
+        img{
+          max-width: 292px;
+        }
       }
     }
   }

@@ -70,11 +70,6 @@ $(document).ready(function(){
     ]
   });
 
-  $('.dop > img').on('click', function(){
-    var imgSrc = $(this).attr('src');
-    $('.main-img').attr('src' , imgSrc);
-  });
-
  
   $('.all-slider-partners').slick({
     dots: false,
@@ -165,9 +160,10 @@ $(document).ready(function(){
     $('.hiddenTextForm').stop().slideToggle();
   });
 
-  // $("#phone1").mask("8(999) 999-9999");
     
   //Slick-empty
   $('.slick-arrow').empty();
   $('.slick-dots > li > button').empty();
+
+
 });

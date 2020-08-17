@@ -60,6 +60,34 @@ header{
             margin-left: 15px;
           }
         }
+        .open-list{
+          position: relative;
+          .hiddenNav{
+            position: absolute;
+            top: 25px;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            z-index: -1;
+            opacity: 0;
+            background: #8CBBB1;
+            transition: 0.5s;
+            p{
+              margin-bottom: 10px;
+              a{
+                color: #fefefe;
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+          .openHiddenNav{
+            z-index: 55;
+            opacity: 1;
+          }
+        }
       }
     }
     .open-nav-mob{
@@ -131,7 +159,7 @@ header{
           justify-content: space-between;
           li{
             &:not(:last-of-type){
-              margin-right: 50px;
+              padding-right: 50px;
             }
             a{
               color: #8ca1b1;
@@ -160,6 +188,7 @@ header{
             }
           }
           .open-list{
+            position: relative;
             a{
               display: flex;
               align-items: center;
@@ -169,6 +198,33 @@ header{
                   color: #0b3c4d;
                 }
               }
+            }
+            .hiddenNav{
+              position: absolute;
+              top: 30px;
+              left: 0;
+              z-index: -1;
+              max-width: 140px;
+              width: 100%;
+              opacity: 0;
+              transition: 0.5s;
+              p{
+                &:not(:last-of-type){
+                  margin-bottom: 13px;
+                }
+                a{
+                  color: #8ca1b1;
+                  font-size: 13px;
+                  font-weight: 400;
+                  &:hover{
+                    color: #0b3c4d;
+                  }
+                }
+              }
+            }
+            .openHiddenNav{
+              z-index: 15;
+              opacity: 1;
             }
           }
         }
