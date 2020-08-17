@@ -1294,6 +1294,19 @@ main{
 }
 
 @media (min-width: 1280px) {
+  header{
+    .all-head{
+      .nav-desk{
+        ul{
+          .open-list{
+            .hiddenNav{
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
   .top-banner{
     padding-top: 150px;
     .container{
