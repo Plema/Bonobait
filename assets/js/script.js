@@ -47,7 +47,7 @@ $(document).ready(function(){
     $('.main-img').attr('src' , imgSrc);
   });
 
-  $("#phone1").mask("8(999) 999-9999");
+  // $("#phone1").mask("8(999) 999-9999");
 
 });
 

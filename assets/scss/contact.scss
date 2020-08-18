@@ -1,0 +1,124 @@
+main{
+  padding-top: 90px;
+  h3{
+    margin-bottom: 50px;
+  }
+  .main-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .one-inf{
+      margin-bottom: 60px;
+      width: 100%;
+      .top{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 26px;
+        img{
+          margin-right: 17px;
+        }
+        .circle{
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 2px solid #66c3d1;
+          display: block;
+          margin-right: 13px;
+        }
+        strong{
+          color: #66c3d1;
+          font-size: 12px;
+          font-weight: 700;
+        }
+      }
+      h5{
+        margin-bottom: 20px;
+        color: #231f20;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      a{
+        display: flex;
+        align-items: baseline;
+        img{
+          margin-right: 12px;
+        }
+        p{
+          color: #231f20;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.54px;
+          span{
+            font-size: 16px;
+            font-weight: 400;
+            color: #231f20;
+            display: block;
+          }
+        }
+      }
+      ul{
+        li{
+          line-height: 24px;
+          strong{
+            width: 55px;
+            color: #231f20;
+            font-size: 16px;
+            font-weight: 400;
+            display: inline-block;
+            font-weight: normal;
+          }
+          span{
+            color: #231f20;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+      .link{
+        margin-bottom: 20px;
+        p{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .map{
+    width: 100%;
+    height: 375px;
+  }
+}
+
+@media (min-width: 550px) {
+  main{
+    .one-inf{
+      max-width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main{
+    .main-info{
+      .one-inf{
+        max-width: 100%;
+        width: auto;
+        .link{
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .map{
+      height: 440px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  main{
+    .main-info{
+      padding-right: 100px;
+    }
+  }
+}
