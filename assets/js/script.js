@@ -3,11 +3,11 @@ $(document).ready(function(){
   $('body').css('opacity','1')
  
   $(".burg").bind("click", function(event){
-    $('.nav-mob').toggleClass('open-nav-mob');
+    $('.nav-mob').addClass('open-nav-mob');
+    $('.back-dark').addClass('open-back');
   });
  
   $(".open-list").bind("click", function(event){
-    // $('.hiddenNav').removeClass('openHiddenNav');
     $(this).find('.hiddenNav').toggleClass('openHiddenNav');
   });
 
@@ -47,7 +47,47 @@ $(document).ready(function(){
     $('.main-img').attr('src' , imgSrc);
   });
 
-  // $("#phone1").mask("8(999) 999-9999");
+   
+  $(".back-dark").bind("click", function(event){
+    $('.back-dark').removeClass('open-back');
+    $('.pop-up').removeClass('open-pop');
+    $('.nav-mob').removeClass('open-nav-mob');
+    $('body').css('overflow', 'auto')
+  });
+   
+  $(".close-pop").bind("click", function(event){
+    $('.back-dark').removeClass('open-back');
+    $('.pop-up').removeClass('open-pop');
+    $('body').css('overflow', 'auto')
+  });
+   
+  $(".open-med-pop").bind("click", function(event){
+    $('.back-dark').addClass('open-back');
+    $('.med-pop').addClass('open-pop');
+    $('body').css('overflow', 'hidden')
+  });
+   
+  $(".open-vet-pop").bind("click", function(event){
+    $('.back-dark').addClass('open-back');
+    $('.vet-pop').addClass('open-pop');
+    $('body').css('overflow', 'hidden')
+  });
+      
+  $(".open-phone-pop").bind("click", function(event){
+    $('.back-dark').addClass('open-back');
+    $('.contact-pop').addClass('open-pop');
+    $('body').css('overflow', 'hidden')
+  });
+      
+  $(".open-politic").bind("click", function(event){
+    $('.back-dark').addClass('open-back');
+    $('.politic-pop').addClass('open-pop');
+    $('body').css('overflow', 'hidden')
+  });
+
+
+  $("#phone1").mask("8(999) 999-9999");
+  $("#phone2").mask("8(999) 999-9999");
 
 });
 

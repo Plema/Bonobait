@@ -27,7 +27,7 @@
   height: 45px;
   line-height: 45px;
   border-radius: 23px;
-  background-color: #088dd2;
+  background: #088dd2;
   text-align: center;
   color: #fefefe;
   font-size: 12px;
@@ -37,7 +37,7 @@
   border: none;
   font-family: 'Montserrat';
   &:hover{
-    background-color: #1174a8;
+    background: #1174a8;
   }
 }
 
@@ -53,6 +53,7 @@
   font-weight: 400;
   text-align: center;
   display: block;
+  transition: 0.5s;
   margin: 0 auto;
   &:hover{
     background: #8ca1b1;
