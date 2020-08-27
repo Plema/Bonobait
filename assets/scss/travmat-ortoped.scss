@@ -72,6 +72,12 @@ main{
       justify-content: flex-start;
       .one-block{
         margin-right: 60px;
+        .white-button{
+          width: 258px;
+          height: 62px;
+          line-height: 62px;
+          border-radius: 31px;
+        }
       }
     }
   }

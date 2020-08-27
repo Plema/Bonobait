@@ -38,6 +38,19 @@ main{
 @media (min-width: 1280px){
   main{
     padding-bottom: 110px;
+    .title{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      h3{
+        padding-right: 15px;
+      }
+      .data{
+        text-align: right;
+        padding-left: 15px;
+        height: 20px;
+      }
+    }
     .top-block{
       display: flex;
       align-items: flex-start;

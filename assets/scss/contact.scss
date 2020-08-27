@@ -118,7 +118,9 @@ main{
 @media (min-width: 1440px) {
   main{
     .main-info{
-      padding-right: 100px;
+      .one-inf{
+        width: 25%;
+      }
     }
   }
 }

@@ -18,13 +18,16 @@ main{
     color: #231f20;
     font-size: 18px;
     font-weight: 300;
-    padding: 0 15px;
   }
 .all-sel{
   position: relative;
   width: 290px;
   height: 50px;
   margin-bottom: 25px;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: auto;
   .icon-triangle-1{
     position: absolute;
     z-index: 11;
@@ -36,6 +39,7 @@ main{
     bottom: 0;
     right: 25px;
     margin: auto;
+    z-index: 1;
   }
   .select{
     width: 290px;
@@ -43,12 +47,12 @@ main{
     border: 1px solid #dfdfdf;
     background-color: #ffffff;
     position: absolute;
-    z-index: 10;
     p{
       font-size: 14px;
       font-weight: 500;
       padding: 15px 30px;
       cursor: pointer;
+      z-index: 1;
     }
     .showTextGeneral{
       color: #66c3d1;
@@ -284,6 +288,18 @@ main{
           font-size: 24px;
           margin-bottom: 40px;
         }
+        .all-sel{
+          .select{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            p{
+              width: 49%;
+              position: relative;
+              margin-right: 0;
+            }
+          }
+        }
         .all-vet-slider{
           width: 864px;
           padding: 0;
@@ -350,6 +366,13 @@ main{
   main{
     .veterenar{
       .all-vet-info{
+        .all-sel{
+          .select{
+            p{
+              width: 33%;
+            }
+          }
+        }
         .all-vet-slider{
           width: 1080px;
           .one-slide{
@@ -387,6 +410,13 @@ main{
   main{
     .veterenar{
       .all-vet-info{
+        .all-sel{
+          .select{
+            p{
+              width: 25%;
+            }
+          }
+        }
         .all-vet-slider{
           width: 1160px;;
           .one-slide{

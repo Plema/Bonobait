@@ -107,8 +107,8 @@ main{
   main{
     .all-news{
       .one-news{
-        margin-right: 10px;
         max-width: 280px;
+        margin-right: 10px;
         img{
           max-width: 280px;
         }
@@ -121,7 +121,10 @@ main{
   main{
     .all-news{
       .one-news{
-        margin-right: 28px;
+        margin-right: 0;
+        &:not(:nth-child(4n)){
+          margin-right: 28px;
+        }
         max-width: 292px;
         img{
           max-width: 292px;

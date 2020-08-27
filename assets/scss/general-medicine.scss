@@ -31,7 +31,9 @@ main{
       position: relative;
       position: absolute;
       z-index: 10;
-      padding-right: 40px;
+      left: 0;
+      right: 0;
+      margin: auto;
       i{
         position: absolute;
         top: 20px;
@@ -41,12 +43,15 @@ main{
         color: #66c3d1;
         display: block;
         height: 8px;
+        z-index: 1;
       }
       p{
         font-size: 14px;
         font-weight: 500;
         padding-left: 30px;
         padding: 14px 0;
+        padding-right: 35px;
+        z-index: 2;
       }
       .showText{
         color: #66c3d1;

@@ -9,8 +9,13 @@ $(document).ready(function(){
  
   $(".open-list").bind("click", function(event){
     $(this).find('.hiddenNav').toggleClass('openHiddenNav');
+    $('.back-light').addClass('open-back');
   });
-
+   
+  $(".back-light").bind("click", function(event){
+    $('.back-light').removeClass('open-back');
+    $('.hiddenNav').removeClass('openHiddenNav')
+  });
   
   $(".first-med").bind("click", function(event){
     $('.all-sel-desc > p').removeClass('active');
@@ -46,6 +51,7 @@ $(document).ready(function(){
     var imgSrc = $(this).attr('src');
     $('.main-img').attr('src' , imgSrc);
   });
+
 
    
   $(".back-dark").bind("click", function(event){
@@ -86,8 +92,8 @@ $(document).ready(function(){
   });
 
 
-  $("#phone1").mask("8(999) 999-9999");
-  $("#phone2").mask("8(999) 999-9999");
+  $("#phone1").mask("7(999) 999-9999");
+  $("#phone2").mask("7(999) 999-9999");
 
 });
 

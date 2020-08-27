@@ -12,6 +12,7 @@ main{
         height: 60px;
         line-height: 60px;
         font-size: 15px;
+        border-radius: 31px;
       }
     }
   }
@@ -108,17 +109,22 @@ main{
       }
     }
     .all-blocks{
-      justify-content: flex-start;
-      .one-block{
-        margin-right: 130px;
-      }
+      justify-content: space-between;
     }
   }
 }
 
 @media (min-width: 1280px) {
   main{
+    .title{
+      .change{
+        button{
+          width: 258px;
+        }
+      }
+    }
     .all-blocks{
+      justify-content: flex-start;
       .one-block{
         margin-right: 65px;
       }

@@ -22,6 +22,7 @@ header{
         align-items: center;
         justify-content: center;
         border: none;
+        background: none;
         span{
           display: none;
         }
@@ -154,6 +155,7 @@ header{
       .nav-desk{
         display: block;
         margin-top: 10px;
+        padding: 0 10px;
         ul{
           display: flex;
           align-items: flex-start;
@@ -225,7 +227,7 @@ header{
               }
             }
             .openHiddenNav{
-              z-index: 15;
+              z-index: 1500;
               opacity: 1;
             }
           }
@@ -259,9 +261,13 @@ header{
 @media (min-width: 1600px){
   header{
     .all-head{
+      .logo{
+        max-width: 125px;
+      }
       .nav-desk{
-        max-width: 800px;
+        max-width: 815px;
         width: 100%;
+        padding: 0 5px;
       }
     }
   }

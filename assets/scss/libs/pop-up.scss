@@ -10,6 +10,17 @@
   transition: 0.5s;
 }
 
+.back-light{
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
 .open-back{
   opacity: 0.8;
   z-index: 500;
@@ -328,6 +339,7 @@
     padding: 70px 85px;
     height: auto;
     .content-pop{
+      justify-content: space-around;
       .image-block{
         .main-img{
           max-width: 420px;
@@ -357,8 +369,9 @@
     }
   }
   .med-pop{
-    padding: 65px 90px 40px;
+    padding: 65px 100px 40px;
     .content-pop{
+      justify-content: space-around;
       img{
         max-width: 420px;
         width: 100%;
