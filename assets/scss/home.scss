@@ -48,6 +48,19 @@ main{
     }
   }
 }
+.slick-disabled{
+  opacity: 0.5;
+  &:hover{
+    background: transparent;
+    border-color: #8ca1b1;
+    &:before{
+      opacity: 1;
+    }
+    &:after{
+      opacity: 0;
+    }
+  }
+}
 .top-banner{
   padding: 85px 0 65px;
   background: url('../img/mob-banner.jpg') no-repeat 50% 100%;
@@ -144,7 +157,7 @@ main{
           max-width: 230px;
           max-height: 190px;
           width: 100%;
-          animation-duration: 3s;
+          animation-duration: 3.8s;
           animation-name: slidein;
           animation-iteration-count: infinite;
           animation-direction: alternate;
@@ -1340,6 +1353,7 @@ main{
           .open-list{
             .hiddenNav{
               background: transparent;
+              box-shadow: none;
             }
           }
         }
